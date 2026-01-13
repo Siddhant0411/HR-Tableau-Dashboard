@@ -2,48 +2,43 @@ console.log('Is this working?');
 
 let viz;
 
-//Add Share Link to Tableau Public in here
 const url = "https://public.tableau.com/views/HRdashboard_17682989195620/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
 
 const vizContainer = document.getElementById('vizContainer');
+
 const options = {
     hideTabs: true,
-    width: 100%;
-    height: 90vh;
+    width: "100%", 
+    height: "800px", 
     onFirstInteraction: function() {
-        workbook = viz.getWorkbook();
-        activeSheet = workbook.getActiveSheet();
+        const workbook = viz.getWorkbook();
+        const activeSheet = workbook.getActiveSheet();
         console.log("My dashboard is interactive");
     }
 };
 
-//create a function to generate the viz element
 function initViz() {
     console.log('Executing the initViz function!');
     viz = new tableau.Viz(vizContainer, url, options);
 }
 
-// run the initViz function when the page loads
 document.addEventListener("DOMContentLoaded", initViz);
 
 const exportPDF = document.getElementById('exportPDF');
 const exportImage = document.getElementById('exportImage');
 
-
-//click on the pdf button to generate pdf of dashboard
 function generatePDF() {
-    viz.showExportPDFDialog()
+    viz.showExportPDFDialog();
 }
 
 exportPDF.addEventListener("click", function () {
     generatePDF();
-  });
+});
 
-//click on image to generate image of dashboard
 function generateImage() {
-    viz.showExportImageDialog()
+    viz.showExportImageDialog();
 }
 
 exportImage.addEventListener("click", function () {
     generateImage();
-  });
+});
