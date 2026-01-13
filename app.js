@@ -8,12 +8,10 @@ const vizContainer = document.getElementById('vizContainer');
 
 const options = {
     hideTabs: true,
-    width: "100%", 
-    height: "800px", 
-    onFirstInteraction: function() {
-        const workbook = viz.getWorkbook();
-        const activeSheet = workbook.getActiveSheet();
-        console.log("My dashboard is interactive");
+    width: "1400px",  
+    height: "800px",  
+    onFirstInteractive: function() {
+        console.log("Dashboard loaded.");
     }
 };
 
