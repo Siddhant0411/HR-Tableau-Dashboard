@@ -8,8 +8,8 @@ const url = "https://public.tableau.com/views/HRdashboard_17682989195620/Dashboa
 const vizContainer = document.getElementById('vizContainer');
 const options = {
     hideTabs: true,
-    height: 1000,
-    width: 1800,
+    width: 100%;
+    height: 90vh;
     onFirstInteraction: function() {
         workbook = viz.getWorkbook();
         activeSheet = workbook.getActiveSheet();
