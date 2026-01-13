@@ -1,26 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resources Dashboard</title>
 
-    <title>Add Title Here</title>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
-    <script type="text/javascript"
-	    src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script type="text/javascript"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
 
+        h1 {
+            color: #333;
+        }
+
+        /* This container fix prevents the cropping seen in your screenshot */
+        #vizContainer {
+            width: 100%;       /* Ensures it uses the full width of the page */
+            height: 90vh;      /* Uses 90% of the vertical screen height */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .button-group {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <h1>Add Title Here</h1>
+    <h1>Human Resources Dashboard | Overview</h1>
 
-    <button id = "exportPDF">Generate PDF</button>
-    <button id = "exportImage">Generate Image</button>
-
+    <div class="button-group">
+        <button id="exportPDF">Generate PDF</button>
+        <button id="exportImage">Generate Image</button>
+    </div>
 
     <div id="vizContainer"></div>
 
     <script src="./app.js"></script>
 
 </body>
-
 </html>
