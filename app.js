@@ -2,7 +2,7 @@ console.log('Is this working?');
 
 let viz;
 
-const url = "https://public.tableau.com/views/HRdashboard_17682989195620/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+const url = "https://public.tableau.com/views/HRdashboard_17682989195620/Dashboard1";
 
 const vizContainer = document.getElementById('vizContainer');
 
